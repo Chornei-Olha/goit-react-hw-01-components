@@ -1,4 +1,6 @@
-import styles from './Statistics.styled'
+import PropTypes from 'prop-types';
+
+// import styles from './Statistics.styled'
 
 export const Statistics = ({title, stats}) => {
     return <section class="statistics">
