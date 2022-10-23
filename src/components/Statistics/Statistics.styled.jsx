@@ -1,27 +1,27 @@
-// .statistics {
-// 	width: 335px;
-//     margin: auto;
-//     border: solid 1px rgb(211, 221, 221);
-// }
+import styled from 'styled-components';
 
-// .title {
-// 	font-size: 16p;
-// 	color: #333333;
-// 	text-align: center;
-//     margin-top: 30px;
-//     margin-bottom: 25px;
-// }
 
-// .stat_list{
-//     height: 60px;
-//     display: flex;
-//     list-style: none;
-// }
+export const Statistics = styled.div
+`	width: 335px;
+    margin: auto;
+    border: solid 1px rgb(211, 221, 221);`
 
-// .item{
-//     width: 70px;
-//     border: solid 1px teal;
-// }
+export const StatTitle = styled.h2
+`	font-size: 16p;
+	color: #333333;
+	text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;`
+
+export const StatList = styled.ul
+`    height: 60px;
+    display: flex;
+    list-style: none;`
+
+export const Item = styled.li
+`    width: 70px;
+    border: solid 1px teal;`
+
 
 // .label{
 //     margin-top: 5px;
