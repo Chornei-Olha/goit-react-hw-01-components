@@ -1,4 +1,5 @@
-import styles from './Profile.styled'
+import PropTypes from 'prop-types';
+// import styles from './Profile.styled'
 
 export const Profile = ({ name, tag, location, avatar, stats }) => {
   return <div className={styles.profile}>
@@ -31,7 +32,7 @@ Profile.propTypes = {
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  stats: PropTypes.shape({
+  stats: PropTypes.exact({
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
