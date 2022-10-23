@@ -1,33 +1,40 @@
 import PropTypes from 'prop-types';
-import styles from './Profile.styled';
 
-export const Profile = ({ name, tag, location, avatar, stats }) => {
-  return (
-    <div className={styles.profile}>
-      <div className={styles.description}>
-        <img src={avatar} alt="user avatar" className={styles.avatar} />
-        <p className={styles.name}>{name}</p>
-        <p className={styles.tag}>{tag}</p>
-        <p className={styles.location}>{location}</p>
-      </div>
+import {
+  UserCard,
+  Description,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  StatsList,
+  StatsItem,
+} from './Profile.styled';
 
-      <ul className={styles.stats}>
-        <li>
-          <span className={styles.label}>Followers</span>
-          <span className={styles.quantity}>{stats.followers}</span>
-        </li>
-        <li>
-          <span className={styles.label}>Views</span>
-          <span className={styles.quantity}>{stats.views}</span>
-        </li>
-        <li>
-          <span className={styles.label}>Likes</span>
-          <span className={styles.quantity}>{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
-  );
-};
+export const Profile = ({ username, tag, location, avatar, stats }) => {
+  return <UserCard>
+      <Description>
+        <Avatar src={avatar} alt={username} />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
+      <StatsList>
+        <StatsItem>
+          <span>Followers</span>
+          <span>{stats.followers}</span>
+        </StatsItem>
+        <StatsItem>
+          <span>Views</span>
+          <span>{stats.views}</span>
+        </StatsItem>
+        <StatsItem>
+          <span>Likes</span>
+          <span>{stats.likes}</span>
+        </StatsItem>
+      </StatsList>
+    </UserCard>
+}
 
 Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
