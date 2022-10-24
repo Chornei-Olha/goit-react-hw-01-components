@@ -1,8 +1,8 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
-  UserCard,
+  UseCard,
   Description,
   Avatar,
   Name,
@@ -13,7 +13,7 @@ import {
 } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
-  return <UserCard>
+  return <UseCard>
       <Description>
         <Avatar src={avatar} alt={username} />
         <Name>{username}</Name>
@@ -34,17 +34,17 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
           <span>{stats.likes}</span>
         </StatsItem>
       </StatsList>
-    </UserCard>
+    </UseCard>
 }
 
-// Profile.propTypes = {
-//   avatar: PropTypes.string.isRequired,
-//   name: PropTypes.string.isRequired,
-//   tag: PropTypes.string.isRequired,
-//   location: PropTypes.string.isRequired,
-//   stats: PropTypes.exact({
-//     followers: PropTypes.number.isRequired,
-//     views: PropTypes.number.isRequired,
-//     likes: PropTypes.number.isRequired,
-//   }),
-// };
+Profile.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.exact({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
+};
