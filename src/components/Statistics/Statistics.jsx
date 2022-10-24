@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { BlockStatistics, StatTitle, StatList, StatItem } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
-  return (
-    <BlockStatistics>
+  return <BlockStatistics>
       <StatTitle>{title}</StatTitle>
       <StatList>
         {stats.map(({label, percentage }) => (
@@ -15,7 +14,6 @@ export const Statistics = ({ title, stats }) => {
         ))}
       </StatList>
     </BlockStatistics>
-  );
 };
 
 Statistics.propTypes = {
