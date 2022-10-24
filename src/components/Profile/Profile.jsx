@@ -12,7 +12,8 @@ import {
 } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
-  return <UseCard>
+  return (
+    <UseCard>
       <Description>
         <Avatar src={avatar} alt={username} />
         <Name>{username}</Name>
@@ -34,7 +35,8 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
         </StatsItem>
       </StatsList>
     </UseCard>
-}
+  );
+};
 
 Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
