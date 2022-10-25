@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const BlockStatistics = styled.div`
   width: 335px;
   margin: auto;
+  margin-top: 20px;
   border: solid 1px rgb(211, 221, 221);
 `;
 
@@ -15,6 +16,7 @@ export const StatTitle = styled.h2`
 `;
 
 export const StatList = styled.ul`
+  padding-left: 0px;
   height: 60px;
   display: flex;
   list-style: none;
@@ -23,17 +25,22 @@ export const StatList = styled.ul`
 export const StatItem = styled.li`
   width: 70px;
   border: solid 1px teal;
+  background-color: darkslategray;
+
 `;
 
-// .label{
-//     margin-top: 5px;
-//     margin-bottom: 5px;
-//     display: flex;
-//     justify-content: space-evenly;
-// }
+export const Label = styled.span`
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  color: white;
+`;
 
-// .percentage{
-//     font-size: 16px;
-//     display: flex;
-//     justify-content: space-evenly;
-// }
+export const Percentage = styled.span`
+  font-size: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+`;

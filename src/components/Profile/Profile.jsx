@@ -9,6 +9,8 @@ import {
   Location,
   StatsList,
   StatsItem,
+  Label,
+  Quantity,
 } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
@@ -22,16 +24,31 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       </Description>
       <StatsList>
         <StatsItem>
-          <span>Followers</span><br/>
-          <span>{stats.followers}</span>
+          <Label>
+            <span>Followers</span>
+            <br />
+          </Label>
+          <Quantity>
+            <span>{stats.followers}</span>
+          </Quantity>
         </StatsItem>
         <StatsItem>
-          <span>Views</span><br/>
-          <span>{stats.views}</span>
+          <Label>
+            <span>Views</span>
+            <br />
+          </Label>
+          <Quantity>
+            <span>{stats.views}</span>
+          </Quantity>
         </StatsItem>
         <StatsItem>
-          <span>Likes</span><br/>
-          <span>{stats.likes}</span>
+          <Label>
+            <span>Likes</span>
+            <br />
+          </Label>
+          <Quantity>
+            <span>{stats.likes}</span>
+          </Quantity>
         </StatsItem>
       </StatsList>
     </UseCard>

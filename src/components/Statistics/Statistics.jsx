@@ -4,6 +4,8 @@ import {
   StatTitle,
   StatList,
   StatItem,
+  Label,
+  Percentage
 } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
@@ -13,8 +15,12 @@ export const Statistics = ({ title, stats }) => {
       <StatList>
         {stats.map(({ id, label, percentage }) => (
           <StatItem key={id}>
+            <Label>
             <span>{label}</span><br/>
+            </Label>
+            <Percentage>
             <span>{percentage}%</span>
+            </Percentage>
           </StatItem>
         ))}
       </StatList>
