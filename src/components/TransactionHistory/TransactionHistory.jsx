@@ -4,7 +4,6 @@ import {
   BaseTable,
   THead,
   Th,
-  Info,
   Tr,
   Td,
 } from './TransactionHistory.styled';
@@ -13,14 +12,14 @@ export const TransactionHistory = ({ items }) => {
   return (
     <BaseTable>
       <THead>
-        <Tr>
+        <tr>
           <Th>Type</Th>
           <Th>Amount</Th>
           <Th>Currency</Th>
-        </Tr>
+        </tr>
       </THead>
 
-      <Info>
+      <tbody>
         {items.map(({ id, type, amount, currency }) => (
           <Tr key={id}>
             <Td>{type}</Td>
@@ -28,7 +27,7 @@ export const TransactionHistory = ({ items }) => {
             <Td>{currency}</Td>
           </Tr>
         ))}
-      </Info>
+      </tbody>
     </BaseTable>
   );
 };

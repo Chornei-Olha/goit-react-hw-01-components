@@ -1,40 +1,34 @@
 import styled from 'styled-components';
-import { theme } from '../../styles/theme';
 
 export const BaseTable = styled.table`
-  width: 100%;
+  width: 500px;
+  margin: auto;
   border-collapse: collapse;
-  background-color: ${{ theme } = theme.colors.white};
+  background-color: #ffffff;
   text-align: center;
-  box-shadow: ${{ theme } = theme.shadows.small};
+  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
 `;
 
 export const THead = styled.thead`
-  color: ${{ theme } = theme.colors.white};
-  background-color: ${{ theme } = theme.colors.accent};
+  color: #ffffff;
+  background-color: #2196F3;
   text-transform: uppercase;
 `;
 
 export const Th = styled.th`
   padding: 10px;
-  border: 1px solid ${{ theme } = theme.colors.gray};
-  color: ${{ theme } = theme.colors.white};
-`;
-
-export const Info = styled.tbody`
-  padding: 10px;
-  border: 1px solid ${{ theme } = theme.colors.gray};
-  color: ${{ theme } = theme.colors.dark};
+  border: 1px solid #9e9e9e;
+  color: #ffffff;
 `;
 
 export const Tr = styled.tr`
   &:nth-of-type(odd) {
-    background-color: ${{ theme } = theme.colors.light};
+    background-color: #f2f2f2;
   }
 `;
 
 export const Td = styled.td`
   padding: 10px;
-  border: 1px solid ${{ theme } = theme.colors.gray};
-  color: ${{ theme } = theme.colors.dark};
+  border: 1px solid #9e9e9e;
+  color: #212121;
 `;
