@@ -20,7 +20,7 @@ export const StatList = styled.ul`
   list-style: none;
 `;
 
-export const Item = styled.li`
+export const StatItem = styled.li`
   width: 70px;
   border: solid 1px teal;
 `;

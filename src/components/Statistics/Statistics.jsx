@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import {
   BlockStatistics,
@@ -12,10 +11,10 @@ export const Statistics = ({ title, stats }) => {
     <BlockStatistics>
       <StatTitle>{title}</StatTitle>
       <StatList>
-        {stats.map(({ label, percentage }) => (
-          <StatItem>
-            <span>{label}</span>
-            <span>{percentage}</span>
+        {stats.map(({ id, label, percentage }) => (
+          <StatItem key={id}>
+            <span>{label}</span><br/>
+            <span>{percentage}%</span>
           </StatItem>
         ))}
       </StatList>
@@ -26,7 +25,7 @@ export const Statistics = ({ title, stats }) => {
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
-    PropTypes.shape({
+    PropTypes.exact({
       id: PropTypes.number.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.string.isRequired,
