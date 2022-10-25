@@ -11,7 +11,7 @@ export const BaseTable = styled.table`
 
 export const THead = styled.thead`
   color: #ffffff;
-  background-color: #2196F3;
+  background-color: #2196f3;
   text-transform: uppercase;
 `;
 
