@@ -22,15 +22,15 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       </Description>
       <StatsList>
         <StatsItem>
-          <span>Followers</span>
+          <span>Followers</span><br/>
           <span>{stats.followers}</span>
         </StatsItem>
         <StatsItem>
-          <span>Views</span>
+          <span>Views</span><br/>
           <span>{stats.views}</span>
         </StatsItem>
         <StatsItem>
-          <span>Likes</span>
+          <span>Likes</span><br/>
           <span>{stats.likes}</span>
         </StatsItem>
       </StatsList>
@@ -40,7 +40,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
 
 Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   stats: PropTypes.exact({
